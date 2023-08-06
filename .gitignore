@@ -1,0 +1,16 @@
+# Project exclude paths
+/MJS-task3final/multiproject/.gradle/
+/MJS-task3final/multiproject/controller/build/
+/MJS-task3final/multiproject/controller/build/classes/java/main/
+/MJS-task3final/multiproject/model/build/
+/MJS-task3final/multiproject/model/build/classes/java/main/
+/MJS-task3final/multiproject/repository/build/
+/MJS-task3final/multiproject/repository/build/classes/java/main/
+/MJS-task3final/multiproject/repository/build/classes/java/test/
+/MJS-task3final/multiproject/service/build/
+/MJS-task3final/multiproject/service/build/classes/java/main/
+/MJS-task3final/multiproject/service/build/classes/java/test/
+/MJS-task3final/utils/.gradle/
+/MJS-task3final/utils/build/
+/MJS-task3final/utils/build/classes/java/main/
+/MJS-task3final/utils/build/classes/java/test/

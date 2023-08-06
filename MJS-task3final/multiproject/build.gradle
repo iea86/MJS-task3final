@@ -1,0 +1,58 @@
+plugins {
+
+    id 'java'
+}
+jar {
+    manifest {
+        attributes(
+                'Main-Class': 'com.epam.ems.Application'
+        )
+    }
+}
+repositories {
+    jcenter()
+    mavenCentral()
+    maven {
+        url "https://oss.sonatype.org/content/repositories/snapshots"
+        allowInsecureProtocol = true
+    }
+}
+
+version 'unspecified'
+
+
+test {
+    useJUnitPlatform {
+    }
+}
+
+
+dependencies {
+    implementation group: 'org.springframework', name: 'spring-jdbc', version: '5.3.21'
+    implementation group: 'org.springframework', name: 'spring-context', version: '5.2.9.RELEASE'
+    implementation group: 'org.springframework', name: 'spring-jdbc', version: '5.2.9.RELEASE'
+    implementation group: 'org.springframework', name: 'spring-core', version: '5.2.9.RELEASE'
+    implementation group: 'org.apache.commons', name: 'commons-dbcp2', version: '2.8.0'
+    implementation group: 'mysql', name: 'mysql-connector-java', version: '5.1.13'
+    implementation group: 'org.springframework', name: 'spring-web', version: '3.0.2.RELEASE'
+    implementation group: 'com.fasterxml.jackson.core', name: 'jackson-core', version: '2.2.1'
+    implementation group: 'org.springframework', name: 'spring-tx', version: '5.2.9.RELEASE'
+    implementation group: 'commons-dbcp', name: 'commons-dbcp', version: '1.4'
+    implementation group: 'org.hibernate', name: 'hibernate-core', version: '5.4.23.Final'
+    implementation group: 'com.mchange', name: 'c3p0', version: '0.9.5.5'
+    implementation group: 'org.hibernate', name: 'hibernate-c3p0', version: '5.4.23.Final'
+    implementation group: 'org.hibernate', name: 'hibernate-entitymanager', version: '5.4.23.Final'
+    implementation group: 'org.springframework', name: 'spring-orm', version: '5.3.1'
+    implementation group: 'org.springframework', name: 'spring-core', version: '5.2.9.RELEASE'
+// https://mvnrepository.com/artifact/org.springframework.boot/spring-boot
+    implementation group: 'org.springframework.boot', name: 'spring-boot', version: '2.4.0'
+    implementation group:  'org.springframework.boot', name: 'spring-boot-starter-web', version: '2.4.0'
+    implementation group: 'org.springframework.boot', name: 'spring-boot-starter-actuator', version: '2.4.0'
+    implementation group: 'org.springframework.boot', name: 'spring-boot-maven-plugin', version: '2.4.0'
+    implementation group: 'org.springframework.boot', name: 'spring-boot-configuration-processor', version: '2.4.0'
+    implementation group: 'org.springframework.boot', name: 'spring-boot-autoconfigure', version: '2.4.0'
+    implementation group: 'org.springframework.boot', name: 'spring-boot-starter-actuator', version: '2.4.0'
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.3.1'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.3.1'
+    testImplementation group: 'org.apache.commons', name: 'commons-dbcp2', version: '2.8.0'
+}

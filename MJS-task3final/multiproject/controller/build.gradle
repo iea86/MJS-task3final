@@ -1,0 +1,60 @@
+plugins {
+    id 'org.springframework.boot' version '2.0.3.RELEASE'
+    id 'java'
+}
+
+version 'unspecified'
+
+jar {
+    manifest {
+        attributes(
+                'Main-Class': 'com.epam.ems.Application'
+        )
+    }
+}
+repositories {
+
+    mavenCentral()
+    maven {
+        url "https://oss.sonatype.org/content/repositories/snapshots"
+        allowInsecureProtocol = true
+    }
+}
+dependencies {
+    implementation 'org.springframework.boot:spring-boot-starter-web'
+}
+dependencies {
+    implementation group: 'org.springframework', name: 'spring-context', version: '5.3.9.RELEASE'
+    implementation group: 'org.springframework', name: 'spring-web', version: '5.2.9.RELEASE'
+    implementation group: 'org.springframework', name: 'spring-beans', version: '5.2.9.RELEASE'
+    implementation group: 'org.springframework', name: 'spring-webmvc', version: '5.2.9.RELEASE'
+    implementation group: 'javax.servlet', name: 'jstl', version: '1.2'
+    implementation group: 'org.apache.tiles', name: 'tiles-jsp', version: '3.0.8'
+    implementation group: 'org.springframework', name: 'spring-web', version: '3.0.2.RELEASE'
+    implementation group: 'com.fasterxml.jackson.core', name: 'jackson-core', version: '2.11.3'
+    implementation group: 'com.fasterxml.jackson.core', name: 'jackson-databind', version: '2.11.3'
+    implementation group: 'com.fasterxml.jackson.datatype', name: 'jackson-datatype-jsr310', version: '2.11.3'
+    implementation group: 'com.fasterxml.jackson.core', name: 'jackson-annotations', version: '2.2.1'
+    implementation group: 'org.springframework', name: 'spring-tx', version: '5.2.9.RELEASE'
+    implementation group: 'org.springframework', name: 'spring-context-support', version: '5.2.9.RELEASE'
+    implementation group: 'org.springframework.boot', name: 'spring-boot-starter-web', version: '2.4.0'
+    implementation group: 'org.springframework.boot', name: 'spring-boot', version: '2.4.0'
+    implementation group: 'org.springframework.boot', name: 'spring-boot-maven-plugin', version: '2.4.0'
+    implementation group: 'org.apache.maven.plugins', name: 'maven-gpg-plugin', version: '1.6'
+    implementation group: 'com.jayway.jsonpath', name: 'json-path', version: '2.4.0'
+    implementation group:  'org.springframework.hateoas', name: 'spring-hateoas', version: '1.2.1'
+    implementation group: 'org.springframework.boot', name: 'spring-boot-starter-data-jpa', version: '2.4.0'
+    implementation group: 'org.hibernate', name: 'hibernate-core', version: '5.4.23.Final'
+    implementation group: 'com.mchange', name: 'c3p0', version: '0.9.5.5'
+    implementation group: 'org.hibernate', name: 'hibernate-c3p0', version: '5.4.23.Final'
+    implementation group: 'org.springframework.boot', name: 'spring-boot-configuration-processor', version: '2.4.0'
+    implementation group: 'org.springframework.boot', name: 'spring-boot-autoconfigure', version: '2.4.0'
+    implementation group: 'org.springframework.boot', name: 'spring-boot-starter-actuator', version: '2.4.0'
+    //implementation group: 'org.springframework.boot', name: 'spring-boot-starter-security', version: '2.4.0'
+
+    implementation project(":service")
+    implementation project(":model")
+}
+
+
+

@@ -1,0 +1,16 @@
+spring:
+  datasource:
+    url: jdbc:mysql://127.0.0.1:3306/gift?autoReconnect=true
+    driver: com.mysql.cj.jdbc.Driver
+    username: root
+    password: QazWsx123.
+    platform: mysql
+  hibernate:
+    dialect: org.hibernate.dialect.MySQL5Dialect
+    show_sql: true
+    current_session_context_class:  org.springframework.orm.hibernate5.SpringSessionContext
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
